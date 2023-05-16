@@ -1,7 +1,7 @@
 {% set name = "patchworklib" %}
-{% set version = "0.5.2" %}
+{% set version = "0.6.1" %}
 {% set bundle = "tar.gz" %}
-{% set hash = "8d519d0135ab598aa58d41baf890ccf97f79a2533c4983e62e6b00bc2c400239" %}
+{% set hash = "66b455b9b7dcb20ca5c2c6f14f4d9d7647a48043b672d9e72399ea728534a5f0" %}
 
 package:
   name: {{ name|lower }}
@@ -45,7 +45,7 @@ test:
   commands:
     # The pip version can reported incorrectly if setuptools_scm isn't available
     # at build time
-    - "pip list | grep -i {{ name }} | grep {{ version }}"  # [unix]
+    - pip list | grep -i {{ name }} | grep {{ version }}    # [unix]
     # fails on windows with: 'mizani 0.8.1 requires tzdata, which is not installed'
     - pip check  # [unix]
     - pytest tests/
@@ -54,7 +54,7 @@ about:
   home: https://github.com/ponnhide/patchworklib
   license: GPL-3.0-only
   license_file: LICENSE
-  summary: 'patchwork for matplotlib'
+  summary: patchwork for matplotlib
   description: |
     Patchworklib is a universal composer of matplotlib-related plots (simple matplotlib plots, Seaborn plots (both axis-level and figure-level), and plotnine plots). This library is inspired by patchwork for ggplot2. Accordingly, as original patchwork, users can easily align matplotlib plots with only "/" and "|" operators.
 
