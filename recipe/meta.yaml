@@ -1,7 +1,7 @@
 {% set name = "patchworklib" %}
-{% set version = "0.6.2" %}
+{% set version = "0.6.3" %}
 {% set bundle = "tar.gz" %}
-{% set hash = "81653365fdef6eb347ca4ed666b0699c3616859efe2f3d47991778835ba5cec0" %}
+{% set hash = "becd0213a0cddfd0149e2bbe15a7cb429d1436a32f44b70a68b1f7347fa77492" %}
 
 package:
   name: {{ name|lower }}
