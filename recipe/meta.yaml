@@ -16,17 +16,17 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
     - setuptools
     - setuptools_scm
 
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - matplotlib-base >=3.4
     - pandas >=0.24
     - numpy >=1.16
@@ -38,6 +38,7 @@ test:
     - pytest
     - plotnine
     - seaborn
+    - python {{ python_min }}
   imports:
     - patchworklib
   source_files:
